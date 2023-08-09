@@ -1,0 +1,116 @@
+{
+    "memes": [
+        {
+            "name": "easy_stuff.jpeg",
+            "id": "39fbba7d-6d94-4fc5-997c-8c2de3cbe739",
+            "updated_at": "2023-07-22T04:51:57.269691+00:00",
+            "created_at": "2023-07-22T04:48:37.596564+00:00",
+            "last_accessed_at": "2023-07-22T04:51:57.071+00:00",
+            "metadata": {
+                "eTag": "\"29520e672af5c5589dfd3f03663dd56d\"",
+                "size": 51407,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 51407,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "frontend_vision_pro.jpeg",
+            "id": "f516a539-e6bc-49ca-aa76-a38a3eaac1e8",
+            "updated_at": "2023-07-22T04:51:57.265316+00:00",
+            "created_at": "2023-07-22T04:48:38.210231+00:00",
+            "last_accessed_at": "2023-07-22T04:51:57.02+00:00",
+            "metadata": {
+                "eTag": "\"d02fc59a44d68806e2e2a8aa19cb5e33\"",
+                "size": 59408,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 59408,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "google_history_spy.jpeg",
+            "id": "93efcd44-fc56-4213-96e9-8082f98f5944",
+            "updated_at": "2023-07-22T04:51:57.27647+00:00",
+            "created_at": "2023-07-22T04:48:38.548649+00:00",
+            "last_accessed_at": "2023-07-22T04:51:57.065+00:00",
+            "metadata": {
+                "eTag": "\"861ff4ce18ea8289f59f712677718ff2\"",
+                "size": 92891,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 92891,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "it_and_sales.jpeg",
+            "id": "fb478bd2-0643-4946-ac7b-7af74ca13ac2",
+            "updated_at": "2023-07-22T04:51:57.308577+00:00",
+            "created_at": "2023-07-22T04:48:38.33256+00:00",
+            "last_accessed_at": "2023-07-22T04:51:57.145+00:00",
+            "metadata": {
+                "eTag": "\"f364cb2d2e03be6ec92978517e56d4ba\"",
+                "size": 67053,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 67053,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "mmimi_logo_with_text.png",
+            "id": "b0404704-0b8b-459c-9e5b-119f4d8bd180",
+            "updated_at": "2023-07-22T04:51:57.198081+00:00",
+            "created_at": "2023-07-22T04:48:37.33947+00:00",
+            "last_accessed_at": "2023-07-22T04:51:56.988+00:00",
+            "metadata": {
+                "eTag": "\"79238fe3758979d90bd2616f808233fc\"",
+                "size": 11245,
+                "mimetype": "image/png",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 11245,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "netflix_backend_aerchitecture.jpeg",
+            "id": "2ad6fff5-3176-473e-9b97-d49d2916f78f",
+            "updated_at": "2023-07-22T04:51:57.279367+00:00",
+            "created_at": "2023-07-22T04:48:37.67732+00:00",
+            "last_accessed_at": "2023-07-22T04:51:56.971+00:00",
+            "metadata": {
+                "eTag": "\"e7179bd6cf13584639bee31431dd2e82\"",
+                "size": 51421,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 51421,
+                "httpStatusCode": 200
+            }
+        },
+        {
+            "name": "plumber_devops.jpeg",
+            "id": "5e8f35d3-6bf5-43ff-beeb-2e0e8dd27adf",
+            "updated_at": "2023-07-22T04:51:57.292582+00:00",
+            "created_at": "2023-07-22T04:48:38.201899+00:00",
+            "last_accessed_at": "2023-07-22T04:51:57.037+00:00",
+            "metadata": {
+                "eTag": "\"2c8f0c989d274d3dd5fe26018c3d3930\"",
+                "size": 69690,
+                "mimetype": "image/jpeg",
+                "cacheControl": "max-age=3600",
+                "lastModified": "2023-07-22T04:51:58.000Z",
+                "contentLength": 69690,
+                "httpStatusCode": 200
+            }
+        }
+    ]
+}

@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 4767;
 const { supabase } = require("./supabase.config");
+const { getRandomMeme, syncMemes, getRandomMemeURL } = require("./controllers/memes.controller");
+
+app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => {
   return res.status(200).send("random-meme-api");
@@ -35,6 +38,21 @@ app.get("/all", async (req, res) => {
     });
   }
 });
+
+app.get('/upload', async (req, res) => {
+  try {
+    res.render('index')
+  } catch(err) {
+    return res.status(400).json({
+      success: false,
+      message: "Failed to render upload page"
+    })
+  }
+});
+
+app.get('/random', getRandomMemeURL);
+app.get('/api/random', getRandomMeme);
+app.get('/sync', syncMemes);
 
 app.listen(PORT, () => {
   console.log(`Server up on PORT: ${PORT}`);
