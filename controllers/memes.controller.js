@@ -1,6 +1,7 @@
 const { db } = require('../config');
 const { supabase } = require('../supabase.config');
 const BASE_PATH = 'pictures';
+const { Blob } = require('node:buffer')
 
 const getRandomMeme = async (req, res) => {
     try {
@@ -22,14 +23,37 @@ const getRandomMeme = async (req, res) => {
 
 const getRandomMemeURL = async (req, res) => {
     try {
+        /**
+         * @type {"url" | "object"}
+         */
+        const mode = req.query?.mode ?? "url"
         // const memes = (await supabase.storage.from('memes').list('pictures')).data ?? [];
         const memes = await db.getData('/memes');
 
         const randomIndex = getRandomInt(memes.length);
+        
+        const filePath = `${BASE_PATH}/${memes[randomIndex].name}`;
 
-        const signed = (await supabase.storage.from('memes').createSignedUrl(`${BASE_PATH}/${memes[randomIndex].name}`, 60)).data?.signedUrl ?? "_";
+        // const signed = (await supabase.storage.from('memes').createSignedUrl(filePath, 60)).data?.signedUrl ?? "_";
+        switch (mode) {
+            case 'object':
+                const {data, error} = (await supabase.storage.from('memes').download(filePath));
 
-        return res.status(200).send(signed);
+                if (error) {
+                    throw error;
+                }
+
+                console.log(data);
+                
+                const objectStream = require('stream').Readable.from(Buffer.from(await data.arrayBuffer()));
+
+                res.setHeader('Content-Disposition', `inline; filename="${filePath}"`);
+                res.setHeader('Content-Type', data.type);
+
+                return objectStream.pipe(res);
+            case 'url':
+                return (await supabase.storage.from('memes').createSignedUrl(filePath, 60)).data?.signedUrl ?? "_";
+        }
     } catch(err) {
         console.log(err);
         return res.status(400).send(String(err));
