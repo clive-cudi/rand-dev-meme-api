@@ -52,7 +52,8 @@ const getRandomMemeURL = async (req, res) => {
 
                 return objectStream.pipe(res);
             case 'url':
-                return (await supabase.storage.from('memes').createSignedUrl(filePath, 60)).data?.signedUrl ?? "_";
+                const signed = (await supabase.storage.from('memes').createSignedUrl(filePath, 60)).data?.signedUrl ?? "_";
+                return res.status(200).send(signed);
         }
     } catch(err) {
         console.log(err);
