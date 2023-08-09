@@ -42,13 +42,16 @@ const getRandomMemeURL = async (req, res) => {
                 if (error) {
                     throw error;
                 }
-
-                console.log(data);
                 
                 const objectStream = require('stream').Readable.from(Buffer.from(await data.arrayBuffer()));
 
                 res.setHeader('Content-Disposition', `inline; filename="${filePath}"`);
                 res.setHeader('Content-Type', data.type);
+
+                // disabling cache
+                res.header('Pragma', 'no-cache');
+                res.header('Expires', '0');
+                res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
 
                 return objectStream.pipe(res);
             case 'url':

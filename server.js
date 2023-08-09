@@ -3,8 +3,11 @@ const app = express();
 const PORT = 4767;
 const { supabase } = require("./supabase.config");
 const { getRandomMeme, syncMemes, getRandomMemeURL } = require("./controllers/memes.controller");
+const morgan = require("morgan");
 
 app.set('view engine', 'ejs');
+
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   return res.status(200).send("random-meme-api");
